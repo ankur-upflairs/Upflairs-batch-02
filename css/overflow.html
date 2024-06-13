@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overflow{
+            width: 150px;height: 150px;border: 1px solid;
+            /* overflow: hidden; */
+            /* overflow: scroll;  */
+             overflow: auto;
+        }
+        .a{
+            width: 150px;height: 150px;border: 1px solid;
+            overflow-y: hidden;
+        }
+        .b{
+            width: 150px;height: 150px;border: 1px solid;
+            overflow-x: auto;
+        }
+        .c{
+            width: 150px;height: 150px;border: 1px solid;
+            overflow-x: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi eveniet libero? 
+        Velit libero dolorem cum placeat quisquam, qui fugiat ex voluptatem nobis repellendus nisi quia dolores esse! Animi, vitae?
+    </div>
+    <div class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nam consequuntur ut. A ut voluptates ipsum neque nostrum, aut obcaecati maxime doloremque. Officiis voluptatem aperiam nisi, pariatur modi possimus nesciunt.
+    </div>
+    <div class="b">
+        <table style="width: 500px;">
+            <tr>
+                <th style="background-color: red;">name</th>
+            </tr>
+        </table>
+    </div>
+    <div class="c">
+        <img src="cat.jpg" alt="" width="100%">
+    </div>
+</body>
+</html>
