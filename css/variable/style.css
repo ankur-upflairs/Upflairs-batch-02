@@ -1,0 +1,28 @@
+/* global scope  */
+:root{
+    /* creating a variable */
+    --main-color: gold;
+    --bg-color: black;
+}
+
+
+h1{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    
+}
+.p{color: var(--main-color);
+   
+background-color: var(--bg-color);
+}
+/* local scope  */
+.section2{
+    --s-color: crimson;
+    --s-bg-color:skyblue;
+}
+p{
+    color: var( --s-color);
+    background-color: var(--s-bg-color);
+}
+
+

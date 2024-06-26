@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b4 {
+            width: 20px;
+            height: 20px;
+            border: 5px solid rgb(129, 129, 71);
+            border-radius: 50%;
+            opacity: 0.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: c 2s linear infinite;
+        }
+
+        .b3 {
+            width: 25px;
+            height: 25px;
+            border: 10px solid rgb(148, 148, 68);
+            border-radius: 50%;
+            opacity: 0.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: c 2s .5s linear infinite;
+        }
+
+        .b2 {
+            width: 35px;
+            height: 35px;
+            border: 15px solid rgb(128, 128, 33);
+            border-radius: 50%;
+            opacity: 0.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: c 2s 1s linear infinite;
+        }
+
+        .b1 {
+            width: 50px;
+            height: 50px;
+            border: 20px solid rgb(184, 184, 33);
+            border-radius: 50%;
+            opacity: 0.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: c 2s 1.5s linear infinite;
+        }
+
+        @keyframes c {
+            from {}
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* @keyframes c1 {
+            from{}
+            to{border-color: rgb(148, 148, 68);}
+        }
+        @keyframes c2 {
+            from{}
+            to{border-color: rgb(128, 128, 33);}
+        }
+        @keyframes c3 {
+            from{}
+            to{border-color: rgb(184, 184, 33);}
+        }
+        @keyframes c4 {
+            from{}
+            to{border-color: rgb(223, 223, 16);}
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="b1">
+        <div class="b2">
+            <div class="b3">
+                <div class="b4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

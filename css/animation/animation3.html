@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border: 1px solid;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: crimson;
+            border: 1px solid;
+            position: absolute;
+            /* bottom: 0px;
+            left: 0px; */
+            /* animation: movingbox 4s linear infinite; */
+            animation-name: movingbox;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes movingbox {
+            0% {
+                top: 0px;
+                left: 0px;
+            }
+
+            25% {
+                top: 0%;
+                left: calc(100% - 30px);
+            }
+
+            50% {
+              top: calc(100% - 30px);
+              left: calc(100% - 30px);
+            }
+
+            75% {
+               top: calc(100% - 30px);
+               left: 0%;
+            }
+
+            100% {
+               top: 0%;
+               left: 0%;
+            }
+        }
+
+        /* @keyframes movingbox {
+            0% {
+                
+            }
+
+            25% {
+                margin-left: calc(100% - 30px);
+                margin-top: 0%;
+            }
+
+            50% {
+               margin-top: calc(100% - 30px);
+               margin-left: calc(100% - 30px);
+            }
+
+            75% {
+                margin-left: 0%;
+                margin-top: calc(100% - 30px);
+            }
+
+            100% {
+                margin-top: 0%;
+                margin-left: 0%;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class='box1'>
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>

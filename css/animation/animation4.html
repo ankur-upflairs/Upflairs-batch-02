@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        :root{
+            --x:1;
+        }
+        .box1{ width: 150px;height: 150px;border: 1px solid;
+        display: flex;flex-wrap: wrap; gap: 1px;}
+        .el{width: 45px;height: 45px;background-color: yellowgreen;}
+        .el2{order: var(--x); background-color: tan;}
+        .el3{order: calc( var( --x) + 2) ;}
+        .el4{order: var(--x + 4);}
+        .el5{order: 7;}
+        .el6{order: 9;}
+        .el7{order: 11;}
+        .el8{order: 13;}
+        .el1{background-color: red;
+            /* animation: move 8s linear infinite; */
+        }
+        @keyframes move {
+            0%{order: 0;            }
+            15%{order: 2;            }
+            30%{order: 4;}
+            45%{order: 6;}
+            60%{order: 8;}
+            75%{order: 10;}
+            90%{order: 12;}
+            100%{order: 14;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class='box1'>
+        <div class="el el1"></div>
+        <div class="el el2"></div>
+        <div class="el el3"></div>
+        <div class="el el4"></div>
+        <div class="el el5"></div>
+        <div class="el el6"></div>
+        <div class="el el7"></div>
+        <div class="el el8"></div>
+    </div>
+</body>
+</html>
