@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* attr */
+        /* blur */
+        a::after{
+            content: attr(href);
+        }
+        .p{
+            /* margin: calc(10% + 2px); */
+            border-radius: 50%;border: 1px solid;
+            width: 200px;height: 200px;
+            shape-outside: circle();
+        }
+        .box::after{
+            content: '';
+            clear: both;
+        }
+        .box{font-size: max(44px , 34px ,23px);}
+        .box p{float: left;       
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="p"></p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde temporibus fugit corporis fuga cum, inventore commodi. Id, quidem similique architecto odio blanditiis, inventore ipsam reiciendis iusto esse quibusdam vero.
+
+    </div>
+    <a href="http://www.google.com">google</a>
+</body>
+</html>

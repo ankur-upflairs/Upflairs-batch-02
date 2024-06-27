@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 200px;height: 150px;
+            /* shape size at position , color stops  */
+            /* shape - circle ,ellipse  */
+            background-image: radial-gradient(
+               circle 50px, red 100% , green
+            );
+            /* size - farthest-side,closest-side ,farthest-corner, closest corner  */
+            border: 1px solid;}
+        .box2{ width: 150px;height: 150px;
+            background-image: radial-gradient(
+                circle closest-corner at left ,gold 50%,
+                blue 50%
+            );
+            
+            border: 1px solid;}
+        .box3{ width: 150px;height: 150px;
+            background-image: radial-gradient(
+                ellipse 100px 50px at 80% 80% ,
+                green 10%, blue 10% 20%,
+                 red 20%
+            );
+            border: 1px solid;}
+        .box4{ width: 150px;height: 150px;
+            background-image: radial-gradient(
+                circle 10px at 10px 10px,
+                red 100% , transparent 100%
+            ) , radial-gradient(
+                circle 10px at 30px 10px,
+                red 100% , transparent 100%
+            );
+            
+            border: 1px solid;}
+            .box5{ width: 150px;height: 150px;
+            background-image: radial-gradient(
+                10px at top,
+                red 100% , transparent 100%
+            ) , radial-gradient(
+                10px at bottom,
+                red 100% , transparent 100%
+            );
+            
+            border: 1px solid;}
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <div class='box2'></div>
+    <div class='box3'></div>
+    <div class='box4'></div>
+    <div class='box5'></div>
+
+</body>
+</html>
