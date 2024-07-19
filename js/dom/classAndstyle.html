@@ -1,0 +1,44 @@
+<body>
+    <style>
+        .c{font-size: 30px;}
+        .b{color: gray;}
+    </style>
+    <p style="background-color: maroon;" class="a b">paragraph</p>
+    <button>hide this paragraph</button>
+    <script>
+        let el=document.querySelector('p')
+        // el.style.backgroundColor='yellow'
+        // el.style.color='white'
+        // console.log(el.style)
+       //button => one extra div
+        // 1- opacity -50
+       //2- opacity 100
+    //    3- 100% visible 
+    let btn=document.querySelector('button')
+    // let count=0;
+    // btn.addEventListener('click',function(){
+    //     if(count==3) count=0
+    //     // if(count==0) el.style.opacity= '0.5'        
+    //     // if(count==1) el.style.opacity='0'
+    //     // if(count==2) el.style.opacity='1'
+    //     el.style.opacity=count==0?'.5':count==1?'0':'1'
+    //     count++
+    // })
+    btn.addEventListener('click',function(){
+        // console.log(el.classList[0])
+        // el.classList.add('c')
+        // el.classList.remove('b')
+        // el.classList.toggle('b')
+       let allStyles= getComputedStyle(el).getPropertyValue('background-color')
+       console.log(allStyles)
+        // el.className='c'
+        // console.log(el.className)
+    })
+
+    </script>
+</body>
+
+
+
+
+

@@ -1,0 +1,36 @@
+<body>
+    <div id="p" class="x" title="this is div"><b>hello</b><span style="display: none;"> everyone</span></div>
+    <div>world</div>
+    <img src="" alt="no image" width="100">
+    <a href="">google</a>
+    <button>click here</button>
+    <script>
+        // let el=document.getElementById('p')//target element
+        let el = document.querySelector('#p')
+        //node list =>
+        let el1 = document.querySelectorAll('div')
+        //html collection =>
+        let el2 = document.getElementsByTagName('div')
+        // document.getElementsByClassName('xyz')
+        console.log(el1)
+        console.log(el2)
+        console.log([...el1])
+        // el1.forEach((el) => el.addEventListener('click',function(){
+        //     // console.log(this)
+        //     this.style.background = 'tan'
+        // } ))
+        // console.log(el.innerText)
+        // console.log(el.textContent)
+        // console.log(el.innerHTML)
+        document.querySelector('button').addEventListener('click', () => el.innerText = 'changed text')
+        // console.log(el.querySelector('b'))
+        // console.log(el.hasAttribute('titles'))
+        // console.log(el.getAttribute('title'))
+        // console.log(el.setAttribute('class','z'))
+        let image=document.querySelector('img')
+        // console.log(image.src)
+        image.src='calculator.jpg'
+        let a=document.querySelector('a')
+        a.href='https://github.com/ankur-upflairs'
+    </script>
+</body>
