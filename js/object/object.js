@@ -22,6 +22,7 @@ let person={
 // let key='age'
 // console.log(person[key])
 // console.log(Object.entries(person))//convert object to array
+// [['firstName','ankit'],['lastName','saini']]
 // let arr=[['name','pawan'],['age',90]]
 // console.log(Object.fromEntries(arr))//convert array to object
 
@@ -43,6 +44,9 @@ let person={
 // const b=45
 // a.price=12
 // console.log(a)
+
+
+
 
 
 
