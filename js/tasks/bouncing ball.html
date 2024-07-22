@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 50px;height: 50px;border: 1px solid;border-radius: 50%;background-color: maroon;
+        position: absolute;bottom: 20px;left: 100px;
+        }
+        .box2{ width: 400px;height: 10px;border: 1px solid;
+        position: absolute;bottom: 10px;left: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <div class='box2'></div>
+    <script>
+        let step=1
+        let jump=0
+        let side=0
+        let box=document.querySelector('.box1')       
+        function calPath(x,a,b){
+            let y=Math.sqrt((1-(x**2 / a**2)) * b**2)
+            return y
+        }
+        let x=-50
+        setInterval(()=>{
+            let y;
+            if(x<=50){ y= calPath(x,50,300) }
+             if(x>=51 && x <= 125){ y=calPath(x-50,37,200)}           
+             x+=.5
+             console.log(x,y)
+              box.style.transform=`translate(${x+50}px,${-y}px)`             
+        },10)
+        // let animate=()=>{
+        //     let box=document.querySelector('.box1')            
+        //     jump==-300 ? step=2:null
+        //     step ==1 ?jump= -300 :null 
+        //     step==2 ? jump =0: null
+        //     step==3? jump =-200:null
+        //     box.style.transform=`translate(${side}px,${jump}px)`
+        //     side=100 && jump -200? step=4: null
+        //     side==100 && jump ==0? step=3:null
+        //     step ==2 && jump ==0 ?side=100:null
+        //     console.log(jump,side)
+        // }
+        // setInterval(animate,1000)
+        
+    </script>
+</body>
+</html>

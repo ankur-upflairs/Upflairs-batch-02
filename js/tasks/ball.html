@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        .box1{ width: 150px;height: 150px;border: 1px solid;}
+    
+    </style>
+</head>
+<body>
+    <div class='box1'></div>
+    <script >
+        let box=document.querySelector('.box1')
+        let m=0
+        let dir=true
+        setInterval(()=>{
+           let width=window.innerWidth-160
+        //    console.log(width)
+        //  if(width==m) dir = false
+        //  if(m==0) dir = true
+        width == m ? dir= false : m ==0 ? dir= true : null 
+         dir ?  m++ : m-- 
+            box.style.marginLeft=`${m}px`
+
+        },1)
+
+
+    </script>
+</body>
+</html>
