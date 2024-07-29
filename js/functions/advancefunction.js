@@ -33,9 +33,6 @@
 // sum(6,7,8,10,12)
 
 
-
-
-
 //max, min ,avg, sum
 // calculate('avg',4,5,6,8)
 
@@ -62,9 +59,14 @@ function calculate(check, ...a) {
             }
             console.log(sum1)
 
-    }
+    } 
 }
 // calculate('avg',4,54,78)
 // calculate('min',4,54,78)
 // calculate('max', 4, 54, 78)
-calculate('sum', 4, 54, 78)
+// calculate('sum', 4, 54, 78)
+
+// makeList('box','ol','banana','pineapple','orange')
+
+
+
