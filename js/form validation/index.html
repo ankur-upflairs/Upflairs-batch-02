@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="name"><br>
+        <input type="text" id="password"><span id="errorPass"></span><br>
+        <input type="text">
+        <button>submit</button>
+    </form>
+    <script>
+        //@ and . 
+        //. should not be last character
+        //there must be atleast a character b/w @ and .
+        let form =document.querySelector('form')
+        form.addEventListener('submit',function(e){
+            e.preventDefault()
+            let errorPass=document.getElementById('errorPass')
+            let name=document.getElementById('name').value
+            let password=document.getElementById('password').value
+
+            if(name.length < 4 ){
+                alert('name must be greater than 4 characters')
+
+            }
+            else if(password.length < 8 || !password.includes('@')){
+                errorPass.innerText='password must be greater than 8 letters'
+            }
+            else {
+                this.submit()
+            }
+
+        })
+    </script>
+
+
+</body>
+</html>

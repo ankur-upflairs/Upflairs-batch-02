@@ -1,14 +1,23 @@
 class Student{
     static college='XYZ'
     static count=0
+    #firstName
     constructor(firstName,lastName){
         Student.count++
-        this.firstName=firstName
+        this.#firstName=firstName
         this.lastName=lastName
         console.log(Student.count)
     }
-    fullName(){
-        return this.firstName + ' ' + this.lastName
+    get fullName(){
+        let _fullName=this.#firstName + ' ' + this.lastName
+        return _fullName
+    }
+    set fees(fee){
+        if(!Number.isInteger(fee)) {
+            throw Error('fee must be integer')
+            return
+        }
+        this._fees=fee
     }
     dressColor(){
         return 'red'
@@ -33,11 +42,14 @@ class SectionA extends Student{
 let pankaj=new SectionA('pankaj','singh',12)
 
 console.log(pankaj.age)
-console.log(pankaj.fullName())
+// console.log(pankaj.fullName())
 console.log(pankaj.dressColor())
 let gagan=new Student('gagan','mathur')
 console.log(Student.college)
 
+console.log(pankaj.fullName)
+pankaj.fees=23000
+console.log(pankaj._fees)
 
 
 

@@ -57,12 +57,29 @@ let ol=document.querySelector('ol')
 //       console.log(data)
 // })
 
-
-// async await 
+// async await
 async function getdata(){
-     let res=await fetch('https://icanhazdadjoke.com/',{ headers:{'Accept':'application/json'   }})
-     let data= await res.json()
+    let data        
+    try {
+        let res=await fetch('https://icanhazdadjoke.com/',{ headers:{'Accept':'application/json'   }})
+        console.log(res)
+        data = await res.json()
+        
+    }catch (error){
+        console.log(error.name,error.message)
+    }
+    finally{
+        // console.log('code executed')
+    }
+
     console.log(data)
 }
 getdata()
+
+
+
+
+
+
+
 
