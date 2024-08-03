@@ -3,12 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Blogs from './Blogs'
+import Events from './Events'
 
 function App() { 
 
   return (
     <>
-     <Blogs/>
+     {/* <Blogs/> */}
+     <Events/>
+    
     </>
   )
 }
