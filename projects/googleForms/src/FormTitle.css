@@ -1,0 +1,52 @@
+.inputbox{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #eee ,-1px -1px 1px #eee ;
+    margin-bottom: 10px;
+}
+.not-typing{
+    width: 80%;
+    margin: 0px auto;
+}
+
+.not-typing input {
+    width: 100%;
+    border: none;
+    height: 50px;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.not-typing input:focus{
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.not-typing div{width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+.not-typing div button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+.not-typing div button:hover{
+    background-color: #eee;
+}
+
+.note{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #eee ,-1px -1px 1px #eee ;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.note div{visibility: hidden;}
+.note:hover .options{
+    visibility: visible;
+}
