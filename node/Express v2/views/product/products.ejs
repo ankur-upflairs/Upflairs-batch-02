@@ -17,6 +17,10 @@
                   <h5 class="card-title"><%=product.name%></h5>
                   <p class="card-text">price: <%=product.price%></p>
                   <a href="/product/<%=product.id%>" class="btn btn-primary">Go somewhere</a>
+                  <a href="/product/update/<%=product.id%>" class="btn btn-primary">update</a>
+                    <form action="/product/delete/<%=product.id%>" method="post">
+                        <button type="submit" class="btn btn-primary">delete</button>
+                    </form>
                 </div>
               </div>
         </div>

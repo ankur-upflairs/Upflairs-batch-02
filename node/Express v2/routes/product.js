@@ -2,17 +2,18 @@ const express = require("express");
 const router = express.Router();
 const fs=require('node:fs')
 const path=require('node:path')
-const {getAllproducts,getSingleProduct,createProductForm,createProduct,updateProduct,deleteProduct}=
+const {getAllproducts,getSingleProduct,createProductForm,createProduct,
+    updateProductForm,updateProduct,deleteProduct}=
 require('../Controller/productController.js')
 
 
 router.get("/", getAllproducts);
 router.get("/create",createProductForm);
+router.get("/update/:id", updateProductForm);
+router.post("/update/:id", updateProduct);
 router.get("/:id",getSingleProduct)
-router.put("/:id", updateProduct);
 router.post("/",createProduct );
-router.delete("/:id",deleteProduct );
-
+router.post("/delete/:id",deleteProduct );
 
 // router.get("/", (req, res) => {
 // //   res.send("Here is your products");

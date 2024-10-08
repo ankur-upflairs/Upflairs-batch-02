@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="card mb-3" style="max-width: 800px; margin: auto;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="<%= product.image %>" class="card-img" alt="Product Image" id="productImage">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" id="productName"><%= product.name %></h5>
+          <p class="card-text" id="productDescription"><%= product.description %></p>
+          <p class="card-text">
+            <strong>Price:</strong> $<span id="productPrice"><%= product.price %></span>
+          </p>
+          <!-- Created At and Updated At Section -->
+          <p class="card-text">
+            <small class="text-muted">Created at: <span id="createdAt"><%= product.createdAt %></span></small>
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Last updated: <span id="updatedAt"><%= product.updatedAt %></span></small>
+          </p>
+          <a href="/product/update/<%= product._id %>" class="btn btn-primary">update</a>
+          <a href="#" class="btn btn-danger x" >delete</a>
+          <script>
+            document.querySelector('.x').addEventListener('click', function(e) {
+                e.preventDefault()
+                fetch('/product/<%= product._id %>', {
+                    method: 'DELETE'
+                }).then(function(res) {
+                    window.location.href = '/product'
+                })
+            })
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
