@@ -8,18 +8,22 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
+<% if(errors){%>
+<div class="alert alert-danger" role="alert">
+  <%= errors[0].msg %>
+</div>
+<%}%>
 <div class="container mt-5">
   <h2 class="text-center mb-4">Add New Product</h2>
-  <form action="<% if(product){%>/product/update/<%= product._id %><%}else{%>/product<%}%>" method="POST">
+  <form action="<% if(product){%>/product/update/<%= product._id %><%}else{%>/product<%}%>" method="POST" enctype="multipart/form-data" >
     <div class="form-group">
       <label for="productName">Product Name</label>
-      <input type="text" class="form-control" id="productName" placeholder="Enter product name" required name="name" value="<%= product ? product.name : '' %>">
+      <input type="text" class="form-control" id="productName" placeholder="Enter product name" required name="name" value="<%= product ? product.name : '' %>" >
     </div>
-
     <div class="form-group">
-      <label for="imageUrl">Image URL</label>
-      <input type="url" class="form-control" id="imageUrl" placeholder="Enter image URL" required name="image" value="<%= product ? product.image : '' %>">
+      <label for="imageUrl">Image</label>      
+      <input type="file" class="form-control" id="imageUrl"  required name="image"
+      >
     </div>
 
     <div class="form-group">
